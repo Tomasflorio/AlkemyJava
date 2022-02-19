@@ -1,5 +1,10 @@
 package config;
 
+/**
+ *
+ * @author tomas florio
+ */
+
 import java.sql.*;
 
 public class Conexion {
