@@ -26,7 +26,7 @@ public class UsuariosController extends HttpServlet {
         if(accion == null || accion.isEmpty()){
             dispatcher = request.getRequestDispatcher("/");
         }else if(accion.equals("crear")){
-            dispatcher = request.getRequestDispatcher("Vistas/crearUser.jsp");
+            dispatcher = request.getRequestDispatcher("Vistas/register.jsp");
         }else if(accion.equals("ingresar")){
             String usuario = request.getParameter("email");
             String passw = request.getParameter("passw");
