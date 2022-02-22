@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelo.UsersDAO;
+import modelo.Usuario;
 
 /**
  *
@@ -27,6 +28,14 @@ public class UsuariosController extends HttpServlet {
             dispatcher = request.getRequestDispatcher("/");
         }else if(accion.equals("crear")){
             dispatcher = request.getRequestDispatcher("Vistas/register.jsp");
+        }else if(accion.equals("insertarUser")){
+            String nombre = request.getParameter("nombre");
+            String apellido = request.getParameter("apellido");
+            String email = request.getParameter("email");
+            String passw = request.getParameter("passw");
+            Usuario usr = new Usuario(0,nombre,apellido,email,passw);            
+            userDAO.registerUser(usr);
+            dispatcher = request.getRequestDispatcher("/index.html");
         }else if(accion.equals("ingresar")){
             String usuario = request.getParameter("email");
             String passw = request.getParameter("passw");
