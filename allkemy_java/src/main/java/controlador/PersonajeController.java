@@ -29,7 +29,7 @@ public class PersonajeController extends HttpServlet {
         if (accion == null || accion.isEmpty()) {
             dispatcher = request.getRequestDispatcher("/");
         } else if (accion.equals("modificar")) {
-            dispatcher = request.getRequestDispatcher("Vistas/modificar.jsp");
+            dispatcher = request.getRequestDispatcher("Vistas/modificarperso.jsp");
         } else if (accion.equals("actualizar")) {
             int id_per = Integer.parseInt(request.getParameter("id_per")); //fijarse que este bien el id
             String nombre = request.getParameter("nombre");
@@ -59,7 +59,7 @@ public class PersonajeController extends HttpServlet {
             personajeDAO.eliminarPersonaje(id);
             dispatcher = request.getRequestDispatcher("Vistas/characters.jsp");
         } else {
-            dispatcher = request.getRequestDispatcher("/index.html");
+            dispatcher = request.getRequestDispatcher("/");
         }
         dispatcher.forward(request, response);
     }

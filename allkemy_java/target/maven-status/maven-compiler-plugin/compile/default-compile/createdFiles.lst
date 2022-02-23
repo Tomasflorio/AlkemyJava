@@ -1,0 +1,10 @@
+controlador\PersonajeController.class
+modelo\Pelicula.class
+controlador\PeliculaController.class
+modelo\PersonajeDAO.class
+modelo\PeliculaDAO.class
+modelo\UsersDAO.class
+config\Conexion.class
+controlador\UsuariosController.class
+modelo\Personaje.class
+modelo\Usuario.class
