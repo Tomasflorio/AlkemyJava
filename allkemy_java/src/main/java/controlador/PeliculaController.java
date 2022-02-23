@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controlador;
 
 import java.text.ParseException;
@@ -11,8 +7,6 @@ import modelo.Pelicula;
 import modelo.PeliculaDAO;
 import java.awt.Image;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author tflorio
+ * @author tomas florio 
  */
 @WebServlet(name = "PeliculaController", urlPatterns = {"/PeliculaController"})
 public class PeliculaController extends HttpServlet {
